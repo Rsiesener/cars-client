@@ -74,6 +74,7 @@ const showUserPostsSuccess = function (responseData) {
 
       car = `<div>
         <h2>Your listed posts</h2>
+        <h3>ID: ${cars[i]._id}</h3>
         <h3>Make: ${cars[i].make}</h3>
         <h3>Model: ${cars[i].model}</h3>
         <h3>Year: ${cars[i].year}</h3>
@@ -127,11 +128,56 @@ const deleteUserPostSuccess = function (responseData) {
   console.log('responseData is', responseData)
 }
 
+const deleteUserPostFailure = function (error) {
+  $('#error-message').text('Failed to delete post!!')
+  $('#error-message').removeClass()
+  $('#error-message').addClass('text-danger')
+
+  setTimeout(() => {
+    $('#error-display').html('')
+    $('#error-display').removeClass('text-success')
+  }, 5000)
+
+  console.error(error)
+}
+
+const updateUserPostSuccess = function (responseDate) {
+  $('#cars-display').text('Update Successful!!')
+  $('#cars-display').removeClass()
+  $('#cars-display').addClass('text-success')
+  $('form').trigger('reset')
+  $('#createCar').toggle()
+
+  setTimeout(() => {
+    $('#cars-display').html('')
+    $('#cars-display').removeClass('text-success')
+  }, 5000)
+
+  console.log('responseData is', responseDate)
+}
+
+const updateUserPostFailure = function (error) {
+  $('#error-message').text('Failed to update post!!')
+  $('#error-message').removeClass()
+  $('#error-message').addClass('text-danger')
+
+  setTimeout(() => {
+    $('#error-display').html('')
+    $('#error-display').removeClass('text-success')
+  }, 5000)
+
+  console.error(error)
+}
+
 module.exports = {
   newPostSuccess,
   newPostFailure,
   showUserPostsFailure,
   showUserPostsSuccess,
   showAllPostsFailure,
-  showAllPostsSuccess
+  showAllPostsSuccess,
+  deleteUserPostSuccess,
+  deleteUserPostFailure,
+  updateUserPostFailure,
+  updateUserPostSuccess
 }

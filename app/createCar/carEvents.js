@@ -26,7 +26,15 @@ const onShowUserPosts = function (event) {
 const onDeleteUserPost = function (event) {
   event.preventDefault()
 
-  carApi.deleteUserPost()
+  //event.target is the delete button that was clicked 
+  const deleteButton = event.target
+
+  // extract the id from the delete button that was clicked on data-id
+  const id = $(deleteButton).data('id')
+  console.log(id)
+// make API call for deleting one book with the data we grabbed from 
+
+  carApi.deleteUserPost(id)
     .then(carUi.deleteUserPostSuccess)
     .catch(carUi.deleteUserPostFailure)
 }

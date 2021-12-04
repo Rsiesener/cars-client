@@ -32,9 +32,9 @@ const showAllPosts = function () {
   })
 }
 
-const deleteUserPost = function () {
+const deleteUserPost = function (id) {
   return $.ajax({
-    url: `${config.apiUrl}/cars`,
+    url: `${config.apiUrl}/cars/${id}`,
     method: 'DELETE',
     headers: {
       Authorization: 'Bearer ' + store.user.token
@@ -44,7 +44,7 @@ const deleteUserPost = function () {
 
 const updateUserPost = function () {
   return $.ajax({
-    url: `${config.apiUrl}/cars`,
+    url: `${config.apiUrl}/cars/:id`,
     method: 'PATCH',
     headers: {
       Authorization: 'Bearer ' + store.user.token

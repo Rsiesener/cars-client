@@ -9,7 +9,6 @@ const signUpSuccess = function (responseData) {
   $('#signUpNavBtn').hide()
   $('#signInNavBtn').hide()
 
-
   setTimeout(() => {
     $('#cars-display').html('')
     $('#cars-display').removeClass('text-success')

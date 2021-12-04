@@ -21,9 +21,9 @@ $(() => {
   $('#newPost').on('submit', carEvents.onNewPost)
   $('#showUserPostsBtn').on('click', carEvents.onShowUserPosts)
   $('#showAllBtn').on('click', carEvents.onShowAllPosts)
-  $('#deleteBtn').on('click', carEvents.onDeleteUserPost)
-  $('#updateSubmitBtn').on('click', carEvents.onUpdateUserPost)
-  $('.updateBtn').on('click', function () {
+  $('#cars-display').on('click', '.deleteBtn', carEvents.onDeleteUserPost)
+  $('#updateSubmitBtn').on('submit', carEvents.onUpdateUserPost)
+  $('#cars-display').on('click', '.updateBtn', function () {
     $('#updateCar').toggle()
   })
 })
