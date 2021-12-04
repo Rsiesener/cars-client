@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
+      <title>Cars</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
@@ -12,6 +12,107 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>Browser Template</h1>
+
+      <div class="top">
+
+        <div class="headerImgOuter">
+          <img src="https://i.imgur.com/6TTx24I.jpg" class="headerImgInner" alt="Photo of a car doing a burn out">
+        </div>
+
+        <nav>
+          <div class="navSearch">
+              <form class="searchBar">
+                <input type="search" placeholder="Search Post's...">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+              </form>
+            </div>
+
+          <div class="btnWrapper">
+            <div class="navBtns">
+              <button class="showAllBtn" id="showAllBtn">Show All</button>
+              <button class="showUserPostsBtn" id="showUserPostsBtn">your Posts</button>
+              <button class="signUpNavBtn" id="signUpNavBtn">Sign-Up</button>
+              <button class="signInNavBtn" id="signInNavBtn">Sign-In</button>
+              <button class="postNavBtn" id="postNavBtn">New Post</button>
+              <button class="changePasswordNavBtn" id="changePasswordNavBtn">Change Password</button>
+              <button class="signOutBtn" id="signOutBtn">Sign-Out</button>
+            </div>
+          </div>
+        </nav> 
+      </div>
+
+      
+      <section id="content">
+        
+        <div class="firstWord">B<br>U<br>R<br>N<br>O<br>U<br>T </div>
+        
+        <div class="contentContainer">
+
+          <section id="beforeSignIn">
+            <form id="signUp" class="border">
+              <fieldset class="SignUpForm">
+                <legend class="legend1">Sign Up</legend>
+                <input type="email" name="credentials[email]" placeholder="Email" required>
+                <input type="password" name="credentials[password]"
+                placeholder="Password" required>
+                <input type="password" name="credentials[password_confirmation]" placeholder="Password Confirmation" required>
+                <button class="signUpBtn" id="signUpBtn">Sign Up</button>
+              </fieldset>
+            </form>
+
+            <form id="signIn" class="border">
+              <fieldset>
+                <legend class="legend1">Sign In</legend>
+                <input type="email" name="credentials[email]" placeholder="Email" required>
+                <input type="password" name="credentials[password]" placeholder="Password" required>
+                <button class="signInBtn" id="signInBtn">Sign In</button>
+              </fieldset>
+            </form>
+          </section>
+
+          <section id="afterSignIn">
+            <form id="changePassword" class="border">
+              <fieldset>
+                <legend class="legend1">Change Password</legend>
+                <input type="password" name="passwords[old]" placeholder="Old Password" required>
+                <input type="password" name="passwords[new]" placeholder="New Password" required>
+                <button class="changePasswordBtn" id="changePasswordBtn">Change Password</button>
+              </fieldset>
+            </form>
+          </section>
+
+          <section id="newPost">
+            <form id="createCar" class="createCar">
+              <legend class="legend1">New Post</legend>
+              <input type="text" name="car[make]" placeholder="Make" required>
+              <input type="text" name="car[model]" placeholder="Model" required>
+              <input type="number" name="car[year]" placeholder="Year" required>
+              <textarea class="newPostDescription" type="text" name="car[description]"  rows="13" cols="64" placeholder="Tell us anything you would like about your vehicle here."></textarea>
+              <button class="submitBtn" id="submitBtn">Submit</button>
+            </form>
+          </section>
+
+          <section id="updatePost">
+            <form id="updateCar" class="updateCar">
+              <input type="text" name="car[make]" placeholder="Make" required>
+              <input type="text" name="car[model]" placeholder="Model" required>
+              <input type="number" name="car[year]" placeholder="Year" required>
+              <textarea class="newPostDescription" type="text" name="car[description]"  rows="13" cols="64" placeholder="Tell us anything you would like about your vehicle here."></textarea>
+              <button class="submitBtn" id="updateSubmitBtn">Submit</button>
+            </form>
+
+          </section>
+
+          <section>
+            <div id="error-message"></div>
+            <div id="cars-display"></div>
+          </section>
+
+        </div>
+            
+        <div class="secondWord">B<br>A<br>N<br>D<br>I<br>T<br>S</div>
+       
+      </section>
+
     </body>
 </html>

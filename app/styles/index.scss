@@ -1,1 +1,103 @@
 @import '~bootstrap/scss/bootstrap';
+
+body {
+  background-image: url('https://imgur.com/cx0A40H.jpg');
+  background-size: 100% 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  margin-left: 25vw;
+  flex-direction: column;
+  width: 50vw;
+  
+}
+
+nav {
+  display: flex;
+}
+
+#signUp {
+  display: none;
+}
+
+#signIn {
+  display: none;
+}
+
+.showUserPostsBtn {
+  display: none;
+}
+
+#changePassword {
+  display: none;
+}
+
+.changePasswordNavBtn {
+  display: none;
+}
+
+.signOutBtn {
+  display: none;
+}
+
+.postNavBtn {
+  display: none;
+}
+
+.updateCar {
+  display:  none;
+}
+
+.headerImgInner {
+  height: 30vh;
+  width: 35vw;
+  background-attachment: fixed;
+  background-size: 100%;
+  border-radius: 25px;
+}
+
+.wrapper {
+  display: flex;
+}
+
+#content {
+  display: flex;
+  justify-content: center;
+}
+
+.firstWord {
+  display: flex;
+  font-size: 51px;
+  color: purple;
+  margin-right: 100px;
+  
+}
+
+.secondWord {
+  display: flex;
+  font-size: 51px;
+  color: orangered;
+  margin-left: 100px;
+  
+}
+.contentContainer {
+  display: flex;
+  
+  height: 50vh;
+  width: 50vw;
+  
+}
+
+.createCar {
+  display: none;
+}
+
+.showAllBtn {
+  display: none;
+}
