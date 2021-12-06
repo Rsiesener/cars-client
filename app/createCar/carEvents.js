@@ -28,9 +28,9 @@ const onDeleteUserPost = function (event) {
 
   //event.target is the delete button that was clicked 
   const deleteButton = event.target
-
+  console.log(event.target)
   // extract the id from the delete button that was clicked on data-id
-  const id = $(deleteButton).data('id')
+  const id = $(deleteButton).attr('value')
   console.log(id)
 // make API call for deleting one book with the data we grabbed from 
 
@@ -42,7 +42,14 @@ const onDeleteUserPost = function (event) {
 const onUpdateUserPost = function (event) {
   event.preventDefault()
 
-  carApi.updateUserPost()
+  const updateButton = event.target
+
+  const id = $(event.originalEvent.submitter).attr('value')
+
+  const formData = getFormFields(event.target)
+  console.log(formData)
+
+  carApi.updateUserPost(id, formData)
     .then(carUi.updateUserPostSuccess)
     .catch(carUi.updateUserPostFailure)
 }

@@ -22,7 +22,7 @@ $(() => {
   $('#showUserPostsBtn').on('click', carEvents.onShowUserPosts)
   $('#showAllBtn').on('click', carEvents.onShowAllPosts)
   $('#cars-display').on('click', '.deleteBtn', carEvents.onDeleteUserPost)
-  $('#updateSubmitBtn').on('submit', carEvents.onUpdateUserPost)
+  $('#updateCar').on('submit', carEvents.onUpdateUserPost)
   $('#cars-display').on('click', '.updateBtn', function () {
     $('#updateCar').toggle()
   })

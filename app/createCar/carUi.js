@@ -71,7 +71,6 @@ const showUserPostsSuccess = function (responseData) {
   for (let i = 0; i < cars.length; i++) {
     if (cars[i].owner === user) {
       let car = []
-
       car = `<div>
         <h2>Your listed posts</h2>
         <h3>ID: ${cars[i]._id}</h3>
@@ -80,8 +79,9 @@ const showUserPostsSuccess = function (responseData) {
         <h3>Year: ${cars[i].year}</h3>
         <p>Description: ${cars[i].description}</p>
       </div>
-      <button class="deleteBtn">Delete</button>
-      <button class="updateBtn">Update</button>
+      <button class="deleteBtn" value="${cars[i]._id}">Delete</button>
+      <button class="updateBtn" value="${cars[i]._id}">Update</button>
+      <input type="hidden" value="${cars[i]._id}" name="hiddenId[id]"
       `
       carsHtml += car
     }

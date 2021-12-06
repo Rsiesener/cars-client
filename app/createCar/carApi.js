@@ -42,10 +42,11 @@ const deleteUserPost = function (id) {
   })
 }
 
-const updateUserPost = function () {
+const updateUserPost = function (id, formData) {
   return $.ajax({
-    url: `${config.apiUrl}/cars/:id`,
+    url: `${config.apiUrl}/cars/${id}`,
     method: 'PATCH',
+    data: formData,
     headers: {
       Authorization: 'Bearer ' + store.user.token
     }
