@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Cars</title>
+      <title>Car Blog</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
@@ -23,9 +23,9 @@
           <form id="changePassword" class="changePassword">
             <fieldset class="changePasswordForm">
               <legend class="legend1">Change Password</legend>
-              <input type="password" name="passwords[old]" placeholder="Old Password" required>
-              <input type="password" name="passwords[new]" placeholder="New Password" required>
-              <button class="changePasswordBtn" id="changePasswordBtn">Change Password</button>
+              <input class="inputOld" type="password" name="passwords[old]" placeholder="Old Password" required>
+              <input class="inputNew" type="password" name="passwords[new]" placeholder="New Password" required>
+              <button class="changePasswordBtn" id="changePasswordBtn">Submit</button>
             </fieldset>
           </form>
         </div>
@@ -62,6 +62,10 @@
                 <button class="submitBtn" id="updateSubmitBtn">Submit</button>
               </fieldset>
             </form>
+
+            <div id="success-message"></div>
+            <div id="error-message"></div>
+
           </section>
         </div>
         
@@ -90,8 +94,6 @@
           </section>
           
           <section>
-            <div id="success-message"></div>
-            <div id="error-message"></div>
             <div id="cars-display" class="cars-display"></div>
           </section>
           

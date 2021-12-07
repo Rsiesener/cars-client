@@ -7,6 +7,7 @@ const newPostSuccess = function (responseData) {
   $('#success-message').addClass('text-success')
   $('form').trigger('reset')
   $('#createCar').toggle()
+  $('#cars-display').empty()
 
   setTimeout(() => {
     $('#success-message').html('')
@@ -23,7 +24,7 @@ const newPostFailure = function (error) {
 
   setTimeout(() => {
     $('#error-display').html('')
-    $('#error-display').removeClass('text-success')
+    $('#error-display').removeClass('text-danger')
   }, 5000)
 
   console.error(error)
@@ -54,7 +55,7 @@ const showAllPostsFailure = function (error) {
 
   setTimeout(() => {
     $('#error-display').html('')
-    $('#error-display').removeClass('text-success')
+    $('#error-display').removeClass('text-danger')
   }, 5000)
 
   console.log(error)
@@ -71,7 +72,7 @@ const showUserPostsSuccess = function (responseData) {
     if (cars[i].owner === user) {
       let car = []
       car = `<div id="${cars[i]._id}">
-        <h2>Car ${counter}</h2>
+        <h2><span class="legend1">Car: ${counter}</span></h2>
         <h3>ID: ${cars[i]._id}</h3>
         <h3>Make: ${cars[i].make}</h3>
         <h3>Model: ${cars[i].model}</h3>
@@ -94,7 +95,7 @@ const showUserPostsFailure = function (error) {
 
   setTimeout(() => {
     $('#error-display').html('')
-    $('#error-display').removeClass('text-success')
+    $('#error-display').removeClass('text-danger')
   }, 5000)
 
   console.error(error)
@@ -104,6 +105,7 @@ const deleteUserPostSuccess = function (responseData) {
   $('#success-message').text('Delete Successful!!')
   $('#success-message').removeClass()
   $('#success-message').addClass('text-success')
+  $('#cars-display').empty()
 
   setTimeout(() => {
     $('#success-message').html('')
@@ -120,7 +122,7 @@ const deleteUserPostFailure = function (error) {
 
   setTimeout(() => {
     $('#error-display').html('')
-    $('#error-display').removeClass('text-success')
+    $('#error-display').removeClass('text-danger')
   }, 5000)
 
   console.error(error)
@@ -149,7 +151,7 @@ const updateUserPostFailure = function (error) {
 
   setTimeout(() => {
     $('#error-display').html('')
-    $('#error-display').removeClass('text-success')
+    $('#error-display').removeClass('text-danger')
   }, 5000)
 
   console.error(error)

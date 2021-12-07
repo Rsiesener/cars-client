@@ -6,8 +6,6 @@ const signUpSuccess = function (responseData) {
   $('#success-message').addClass('text-success')
   $('form').trigger('reset')
   $('#signUp').hide()
-  $('#signUpNavBtn').hide()
-  $('#signInNavBtn').hide()
 
   setTimeout(() => {
     $('#success-message').html('')
@@ -24,7 +22,7 @@ const signUpFailure = function (error) {
 
   setTimeout(() => {
     $('#error-display').html('')
-    $('#error-display').removeClass('text-success')
+    $('#error-display').removeClass('text-danger')
   }, 5000)
 
   console.error(error)
@@ -62,7 +60,7 @@ const signInFailure = function (error) {
 
   setTimeout(() => {
     $('#error-display').html('')
-    $('#error-display').removeClass('text-success')
+    $('#error-display').removeClass('text-danger')
   }, 5000)
 
   console.error(error)
@@ -89,7 +87,7 @@ const changePasswordFailure = function (error) {
 
   setTimeout(() => {
     $('#error-display').html('')
-    $('#error-display').removeClass('text-success')
+    $('#error-display').removeClass('text-danger')
   }, 5000)
 
   console.error(error)
@@ -128,7 +126,7 @@ const onSignOutFailure = function (error) {
 
   setTimeout(() => {
     $('#error-display').html('')
-    $('#error-display').removeClass('text-success')
+    $('#error-display').removeClass('text-danger')
   }, 5000)
 
   console.error(error)
