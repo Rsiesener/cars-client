@@ -80,12 +80,12 @@ body {
   flex-direction: column;
   align-items: center;
 }
-.inputOld {
+.inputTop {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
 
-.inputNew {
+.inputBottom {
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 }
@@ -325,6 +325,16 @@ body {
 .legend1 {
   display: flex;
   justify-content: center;
+  font-family: fantasy, arial;
+  color: gold;
+  text-shadow: 3px 3px 3px black;
+}
+
+.postDescription {
+  border-radius: 10px;
+}
+
+.showData {
   font-family: fantasy, arial;
   color: gold;
   text-shadow: 3px 3px 3px black;

@@ -23,8 +23,8 @@
           <form id="changePassword" class="changePassword">
             <fieldset class="changePasswordForm">
               <legend class="legend1">Change Password</legend>
-              <input class="inputOld" type="password" name="passwords[old]" placeholder="Old Password" required>
-              <input class="inputNew" type="password" name="passwords[new]" placeholder="New Password" required>
+              <input class="inputTop" type="password" name="passwords[old]" placeholder="Old Password" required>
+              <input class="inputBottom" type="password" name="passwords[new]" placeholder="New Password" required>
               <button class="changePasswordBtn" id="changePasswordBtn">Submit</button>
             </fieldset>
           </form>
@@ -54,11 +54,11 @@
             <form id="updateCar" class="updateCar">
               <fieldset class="updateCarForm">
                 <legend class="legend1">Update Post</legend>
-                <input type="text" name="car[id]" placeholder="Car ID" required>
+                <input class="inputTop" type="text" name="car[id]" placeholder="Car ID" required>
                 <input type="text" name="car[make]" placeholder="Make" required>
                 <input type="text" name="car[model]" placeholder="Model" required>
                 <input type="number" name="car[year]" placeholder="Year" required>
-                <textarea class="newPostDescription" type="text" name="car[description]"  rows="6" cols="30" placeholder="Tell us anything you would like about your vehicle here."></textarea>
+                <textarea class="postDescription" type="text" name="car[description]"  rows="6" cols="30" placeholder="Tell us anything you would like about your vehicle here."></textarea>
                 <button class="submitBtn" id="updateSubmitBtn">Submit</button>
               </fieldset>
             </form>
@@ -75,10 +75,10 @@
             <form id="signUp" class="signUp">
               <fieldset class="signUpForm">
                 <legend class="legend1">Sign Up</legend>
-                <input type="email" name="credentials[email]" placeholder="Email" required>
+                <input class="inputTop" type="email" name="credentials[email]" placeholder="Email" required>
                 <input type="password" name="credentials[password]"
                 placeholder="Password" required>
-                <input type="password" name="credentials[password_confirmation]" placeholder="Password Confirmation" required>
+                <input class="inputBottom" type="password" name="credentials[password_confirmation]" placeholder="Password Confirmation" required>
                 <button class="signUpBtn" id="signUpBtn">Sign Up</button>
               </fieldset>
             </form>
@@ -86,8 +86,8 @@
             <form id="signIn" class="signIn">
               <fieldset class="signInForm">
                 <legend class="legend1">Sign In</legend>
-                <input type="email" name="credentials[email]" placeholder="Email" required>
-                <input type="password" name="credentials[password]" placeholder="Password" required>
+                <input class="inputTop" type="email" name="credentials[email]" placeholder="Email" required>
+                <input class="inputBottom" type="password" name="credentials[password]" placeholder="Password" required>
                 <button class="signInBtn" id="signInBtn">Sign In</button>
               </fieldset>
             </form>
@@ -104,10 +104,10 @@
             <form id="createCar" class="createCar">
               <fieldset class="createCarForm">
                 <legend class="legend1">New Post</legend>
-                <input type="text" name="car[make]" placeholder="Make" required>
+                <input class="inputTop" type="text" name="car[make]" placeholder="Make" required>
                 <input type="text" name="car[model]" placeholder="Model" required>
                 <input type="number" name="car[year]" placeholder="Year" required>
-                <textarea class="newPostDescription" type="text" name="car[description]"  rows="6" cols="30" placeholder="Tell us anything you would like about your vehicle here."></textarea>
+                <textarea class="postDescription" type="text" name="car[description]"  rows="6" cols="30" placeholder="Tell us anything you would like about your vehicle here."></textarea>
                 <button class="submitBtn" id="submitBtn">Submit</button>
               </fieldset>
             </form>

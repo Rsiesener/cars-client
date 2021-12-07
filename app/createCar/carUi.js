@@ -36,13 +36,13 @@ const showAllPostsSuccess = function (responseData) {
   let carsHtml = ''
 
   cars.forEach(car => {
-    carsHtml +=
-    `<div>
-      <h2>Owner: ${car.owner}</h2>
-      <h3>Make: ${car.make}</h3>
-      <h3>Model: ${car.model}</h3>
-      <h3>Year: ${car.year}</h3>
-      <p>Description: ${car.description}</p>
+    carsHtml += `<div>
+      <h2><span class="showData">Owner:</span> ${car.owner}</h2>
+      <h2><span class="showData">Make:</span> ${car.make}</h2>
+      <h2><span class="showData">Model:</span> ${car.model}</h2>
+      <h2><span class="showData">Year:</span> ${car.year}</h2>
+      <h2><span class="showData">Description:</span> ${car.description}</h2>
+      <h1>---------------------------------</h1>
     </div>`
   })
   $('#cars-display').html(carsHtml)
@@ -73,13 +73,14 @@ const showUserPostsSuccess = function (responseData) {
       let car = []
       car = `<div id="${cars[i]._id}">
         <h2><span class="legend1">Car: ${counter}</span></h2>
-        <h3>ID: ${cars[i]._id}</h3>
-        <h3>Make: ${cars[i].make}</h3>
-        <h3>Model: ${cars[i].model}</h3>
-        <h3>Year: ${cars[i].year}</h3>
-        <p>Description: ${cars[i].description}</p>
+        <h2><span class="showData">ID:</span> ${cars[i]._id}</h2>
+        <h2><span class="showData">Make:</span> ${cars[i].make}</h2>
+        <h2><span class="showData">Model:</span> ${cars[i].model}</h2>
+        <h2><span class="showData">Year:</span> ${cars[i].year}</h2>
+        <h2><span class="showData">Description:</span> ${cars[i].description}</h2>
       </div>
       <button class="deleteBtn" value="${cars[i]._id}">Delete</button>
+      <h1>---------------------------------</h1>
       `
       carsHtml += car
       counter++
