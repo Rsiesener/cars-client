@@ -11,23 +11,54 @@ body {
 
 .top {
   display: flex;
-  align-items: center;
-  margin-left: 25vw;
-  flex-direction: column;
-  width: 50vw;
-  
+  justify-content: flex-end;
+}
+
+.topRight {
+  display: flex;
+  justify-content: center;
+  width: 33vw;
+}
+
+.middleLeft {
+  display: flex;
+  justify-content: center;
+  width: 30vw;
+}
+
+.middleRight {
+  display: flex;
+  justify-content: center;
+  width: 30vw;
+}
+
+.updatePost {
+  display: flex;
+  align-self: flex-start;
 }
 
 nav {
-  display: flex;
+
 }
 
 #signUp {
   display: none;
 }
 
+.signUpForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 #signIn {
   display: none;
+}
+
+.signInForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .showUserPostsBtn {
@@ -36,6 +67,12 @@ nav {
 
 #changePassword {
   display: none;
+}
+
+.changePasswordForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .changePasswordNavBtn {
@@ -54,6 +91,19 @@ nav {
   display:  none;
 }
 
+.updateCarForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.submitBtn {
+  color: green;
+  width: 10vw;
+  border-radius: 25px;
+  border-color: green;
+}
+
 .headerImgInner {
   height: 30vh;
   width: 35vw;
@@ -66,31 +116,20 @@ nav {
   display: flex;
 }
 
-#content {
+.content {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 
-.firstWord {
-  display: flex;
-  font-size: 51px;
-  color: purple;
-  margin-right: 100px;
-  
-}
-
-.secondWord {
-  display: flex;
-  font-size: 51px;
-  color: orangered;
-  margin-left: 100px;
-  
-}
 .contentContainer {
   display: flex;
-  
+  overflow: auto;
   height: 50vh;
   width: 50vw;
+  opacity: .7;
+  border-radius: 25px;
+  background-color: white;
+  justify-content: center;
   
 }
 
@@ -98,6 +137,34 @@ nav {
   display: none;
 }
 
+.createCarForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .showAllBtn {
   display: none;
+}
+
+.updateNavBtn {
+  display: none;
+}
+
+.cars-display {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.deleteBtn {
+  color: red;
+  width: 10vw;
+  border-radius: 25px;
+  border-color: red;
+}
+
+.btnWrapper {
+  display: flex;
+  justify-content: center;
 }

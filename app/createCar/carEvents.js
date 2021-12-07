@@ -42,12 +42,12 @@ const onDeleteUserPost = function (event) {
 const onUpdateUserPost = function (event) {
   event.preventDefault()
 
-  const updateButton = event.target
-
-  const id = $(event.originalEvent.submitter).attr('value')
-
-  const formData = getFormFields(event.target)
+  const form = event.target
+  const formData = getFormFields(form)
   console.log(formData)
+  const id = formData.car.id
+
+  console.log(event)
 
   carApi.updateUserPost(id, formData)
     .then(carUi.updateUserPostSuccess)

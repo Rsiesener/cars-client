@@ -12,45 +12,64 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
+      
 
       <div class="top">
-
         <div class="headerImgOuter">
           <img src="https://i.imgur.com/6TTx24I.jpg" class="headerImgInner" alt="Photo of a car doing a burn out">
         </div>
 
-        <nav>
-          <div class="navSearch">
-              <form class="searchBar">
-                <input type="search" placeholder="Search Post's...">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-              </form>
-            </div>
+        <div class="topRight">
+          <form id="changePassword" class="changePassword">
+            <fieldset class="changePasswordForm">
+              <legend class="legend1">Change Password</legend>
+              <input type="password" name="passwords[old]" placeholder="Old Password" required>
+              <input type="password" name="passwords[new]" placeholder="New Password" required>
+              <button class="changePasswordBtn" id="changePasswordBtn">Change Password</button>
+            </fieldset>
+          </form>
+        </div>
 
-          <div class="btnWrapper">
-            <div class="navBtns">
-              <button class="showAllBtn" id="showAllBtn">Show All</button>
-              <button class="showUserPostsBtn" id="showUserPostsBtn">your Posts</button>
-              <button class="signUpNavBtn" id="signUpNavBtn">Sign-Up</button>
-              <button class="signInNavBtn" id="signInNavBtn">Sign-In</button>
-              <button class="postNavBtn" id="postNavBtn">New Post</button>
-              <button class="changePasswordNavBtn" id="changePasswordNavBtn">Change Password</button>
-              <button class="signOutBtn" id="signOutBtn">Sign-Out</button>
-            </div>
-          </div>
-        </nav> 
       </div>
 
+      <nav> 
+        <div class="btnWrapper">
+          <div class="navBtns">
+            <button class="showAllBtn" id="showAllBtn">Show All</button>
+            <button class="showUserPostsBtn" id="showUserPostsBtn">your Posts</button>
+            <button class="updateNavBtn" id="updateNavBtn">Update Post</button>
+            <button class="signUpNavBtn" id="signUpNavBtn">Sign-Up</button>
+            <button class="signInNavBtn" id="signInNavBtn">Sign-In</button>
+            <button class="postNavBtn" id="postNavBtn">New Post</button>
+            <button class="changePasswordNavBtn" id="changePasswordNavBtn">Change Password</button>
+            <button class="signOutBtn" id="signOutBtn">Sign-Out</button>
+          </div>
+        </div>
+      </nav> 
+
       
-      <section id="content">
+      <section id="content" class="content">
+        <div class="middleLeft">
+          <section id="updatePost" class="updatePost">
+            <form id="updateCar" class="updateCar">
+              <fieldset class="updateCarForm">
+                <legend class="legend1">Update Post</legend>
+                <input type="text" name="car[id]" placeholder="Car ID" required>
+                <input type="text" name="car[make]" placeholder="Make" required>
+                <input type="text" name="car[model]" placeholder="Model" required>
+                <input type="number" name="car[year]" placeholder="Year" required>
+                <textarea class="newPostDescription" type="text" name="car[description]"  rows="6" cols="30" placeholder="Tell us anything you would like about your vehicle here."></textarea>
+                <button class="submitBtn" id="updateSubmitBtn">Submit</button>
+              </fieldset>
+            </form>
+          </section>
+        </div>
         
-        <div class="firstWord">B<br>U<br>R<br>N<br>O<br>U<br>T </div>
-        
-        <div class="contentContainer">
+        <div class="contentContainer" id="contentContainer">
 
           <section id="beforeSignIn">
-            <form id="signUp" class="border">
-              <fieldset class="SignUpForm">
+            <form id="signUp" class="signUp">
+              <fieldset class="signUpForm">
                 <legend class="legend1">Sign Up</legend>
                 <input type="email" name="credentials[email]" placeholder="Email" required>
                 <input type="password" name="credentials[password]"
@@ -60,8 +79,8 @@
               </fieldset>
             </form>
 
-            <form id="signIn" class="border">
-              <fieldset>
+            <form id="signIn" class="signIn">
+              <fieldset class="signInForm">
                 <legend class="legend1">Sign In</legend>
                 <input type="email" name="credentials[email]" placeholder="Email" required>
                 <input type="password" name="credentials[password]" placeholder="Password" required>
@@ -69,48 +88,29 @@
               </fieldset>
             </form>
           </section>
-
-          <section id="afterSignIn">
-            <form id="changePassword" class="border">
-              <fieldset>
-                <legend class="legend1">Change Password</legend>
-                <input type="password" name="passwords[old]" placeholder="Old Password" required>
-                <input type="password" name="passwords[new]" placeholder="New Password" required>
-                <button class="changePasswordBtn" id="changePasswordBtn">Change Password</button>
+          
+          <section>
+            <div id="success-message"></div>
+            <div id="error-message"></div>
+            <div id="cars-display" class="cars-display"></div>
+          </section>
+          
+        </div>
+        
+        <div class="middleRight">
+          <section id="newPost">
+            <form id="createCar" class="createCar">
+              <fieldset class="createCarForm">
+                <legend class="legend1">New Post</legend>
+                <input type="text" name="car[make]" placeholder="Make" required>
+                <input type="text" name="car[model]" placeholder="Model" required>
+                <input type="number" name="car[year]" placeholder="Year" required>
+                <textarea class="newPostDescription" type="text" name="car[description]"  rows="6" cols="30" placeholder="Tell us anything you would like about your vehicle here."></textarea>
+                <button class="submitBtn" id="submitBtn">Submit</button>
               </fieldset>
             </form>
           </section>
-
-          <section id="newPost">
-            <form id="createCar" class="createCar">
-              <legend class="legend1">New Post</legend>
-              <input type="text" name="car[make]" placeholder="Make" required>
-              <input type="text" name="car[model]" placeholder="Model" required>
-              <input type="number" name="car[year]" placeholder="Year" required>
-              <textarea class="newPostDescription" type="text" name="car[description]"  rows="13" cols="64" placeholder="Tell us anything you would like about your vehicle here."></textarea>
-              <button class="submitBtn" id="submitBtn">Submit</button>
-            </form>
-          </section>
-
-          <section id="updatePost">
-            <form id="updateCar" class="updateCar">
-              <input type="text" name="car[make]" placeholder="Make" required>
-              <input type="text" name="car[model]" placeholder="Model" required>
-              <input type="number" name="car[year]" placeholder="Year" required>
-              <textarea class="newPostDescription" type="text" name="car[description]"  rows="13" cols="64" placeholder="Tell us anything you would like about your vehicle here."></textarea>
-              <button class="submitBtn" id="updateSubmitBtn">Submit</button>
-            </form>
-
-          </section>
-
-          <section>
-            <div id="error-message"></div>
-            <div id="cars-display"></div>
-          </section>
-
         </div>
-            
-        <div class="secondWord">B<br>A<br>N<br>D<br>I<br>T<br>S</div>
        
       </section>
 

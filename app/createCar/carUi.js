@@ -2,15 +2,15 @@ const { changePasswordFailure } = require('../auth/ui')
 const store = require('../store')
 
 const newPostSuccess = function (responseData) {
-  $('#cars-display').text('Post Successful!!')
-  $('#cars-display').removeClass()
-  $('#cars-display').addClass('text-success')
+  $('#success-message').text('Post Successful!!')
+  $('#success-message').removeClass()
+  $('#success-message').addClass('text-success')
   $('form').trigger('reset')
   $('#createCar').toggle()
 
   setTimeout(() => {
-    $('#cars-display').html('')
-    $('#cars-display').removeClass('text-success')
+    $('#success-message').html('')
+    $('#success-message').removeClass('text-success')
   }, 5000)
 
   console.log('responseData is', responseData)
@@ -32,13 +32,12 @@ const newPostFailure = function (error) {
 const showAllPostsSuccess = function (responseData) {
   const cars = responseData.cars
   console.log(responseData)
-
   let carsHtml = ''
 
   cars.forEach(car => {
     carsHtml +=
     `<div>
-      <h2>Your listed posts</h2>
+      <h2>Owner: ${car.owner}</h2>
       <h3>Make: ${car.make}</h3>
       <h3>Model: ${car.model}</h3>
       <h3>Year: ${car.year}</h3>
@@ -65,14 +64,14 @@ const showUserPostsSuccess = function (responseData) {
   const cars = responseData.cars
   const user = store.user._id
   console.log(responseData)
-
+  let counter = 1
   let carsHtml = ''
 
   for (let i = 0; i < cars.length; i++) {
     if (cars[i].owner === user) {
       let car = []
-      car = `<div>
-        <h2>Your listed posts</h2>
+      car = `<div id="${cars[i]._id}">
+        <h2>Car ${counter}</h2>
         <h3>ID: ${cars[i]._id}</h3>
         <h3>Make: ${cars[i].make}</h3>
         <h3>Model: ${cars[i].model}</h3>
@@ -80,25 +79,11 @@ const showUserPostsSuccess = function (responseData) {
         <p>Description: ${cars[i].description}</p>
       </div>
       <button class="deleteBtn" value="${cars[i]._id}">Delete</button>
-      <button class="updateBtn" value="${cars[i]._id}">Update</button>
-      <input type="hidden" value="${cars[i]._id}" name="hiddenId[id]"
       `
       carsHtml += car
+      counter++
     }
   }
-
-  // cars.forEach(car => {
-  //   car.owner === store.user._id
-  //     ? carsHtml +=
-  //     `<div>
-  //       <h2>Your listed posts</h2>
-  //       <h3>Make: ${car.make}</h3>
-  //       <h3>Model: ${car.model}</h3>
-  //       <h3>Year: ${car.year}</h3>
-  //       <p>Description: ${car.description}</p>
-  //     </div>`
-  //     : carsHtml += ''
-  // })
   $('#cars-display').html(carsHtml)
 }
 
@@ -116,13 +101,13 @@ const showUserPostsFailure = function (error) {
 }
 
 const deleteUserPostSuccess = function (responseData) {
-  $('#cars-display').text('Delete Successful!!')
-  $('#cars-display').removeClass()
-  $('#cars-display').addClass('text-success')
+  $('#success-message').text('Delete Successful!!')
+  $('#success-message').removeClass()
+  $('#success-message').addClass('text-success')
 
   setTimeout(() => {
-    $('#cars-display').html('')
-    $('#cars-display').removeClass('text-success')
+    $('#success-message').html('')
+    $('#success-message').removeClass('text-success')
   }, 5000)
 
   console.log('responseData is', responseData)
@@ -142,15 +127,16 @@ const deleteUserPostFailure = function (error) {
 }
 
 const updateUserPostSuccess = function (responseDate) {
-  $('#cars-display').text('Update Successful!!')
-  $('#cars-display').removeClass()
-  $('#cars-display').addClass('text-success')
+  $('#success-message').text('Update Successful!!')
+  $('#success-message').removeClass()
+  $('#success-message').addClass('text-success')
   $('form').trigger('reset')
-  $('#createCar').toggle()
+  $('#updateCar').toggle()
+  $('#cars-display').empty()
 
   setTimeout(() => {
-    $('#cars-display').html('')
-    $('#cars-display').removeClass('text-success')
+    $('#success-message').html('')
+    $('#success-message').removeClass('text-success')
   }, 5000)
 
   console.log('responseData is', responseDate)

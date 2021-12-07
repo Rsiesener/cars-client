@@ -1,17 +1,17 @@
 const store = require('../store')
 
 const signUpSuccess = function (responseData) {
-  $('#cars-display').text('Signed up successfully')
-  $('#cars-display').removeClass()
-  $('#cars-display').addClass('text-success')
+  $('#success-message').text('Signed up successfully')
+  $('#success-message').removeClass()
+  $('#success-message').addClass('text-success')
   $('form').trigger('reset')
   $('#signUp').hide()
   $('#signUpNavBtn').hide()
   $('#signInNavBtn').hide()
 
   setTimeout(() => {
-    $('#cars-display').html('')
-    $('#cars-display').removeClass('text-success')
+    $('#success-message').html('')
+    $('#success-message').removeClass('text-success')
   }, 5000)
 
   console.log('responseData is', responseData)
@@ -33,9 +33,9 @@ const signUpFailure = function (error) {
 const signInSuccess = function (responseData) {
   store.user = responseData.user
 
-  $('#cars-display').text('Signed in successfully!')
-  $('#cars-display').removeClass()
-  $('#cars-display').addClass('text-success')
+  $('#success-message').text('Signed in successfully!')
+  $('#success-message').removeClass()
+  $('#success-message').addClass('text-success')
   $('form').trigger('reset')
   $('#changePasswordNavBtn').show()
   $('#signOutBtn').show()
@@ -45,10 +45,11 @@ const signInSuccess = function (responseData) {
   $('#postNavBtn').show()
   $('#showUserPostsBtn').show()
   $('#showAllBtn').show()
+  $('#updateNavBtn').show()
 
   setTimeout(() => {
-    $('#cars-display').html('')
-    $('#cars-display').removeClass('text-success')
+    $('#success-message').html('')
+    $('#success-message').removeClass('text-success')
   }, 5000)
 
   console.log('responseData is', responseData)
@@ -68,14 +69,14 @@ const signInFailure = function (error) {
 }
 
 const changePasswordSuccess = function (responseData) {
-  $('#cars-display').text('Change password successfully!')
-  $('#cars-display').removeClass()
-  $('#cars-display').addClass('text-success')
+  $('#success-message').text('Change password successfully!')
+  $('#success-message').removeClass()
+  $('#success-message').addClass('text-success')
   $('form').trigger('reset')
 
   setTimeout(() => {
-    $('#cars-display').html('')
-    $('#cars-display').removeClass('text-success')
+    $('#success-message').html('')
+    $('#success-message').removeClass('text-success')
   }, 5000)
 
   console.log('responseData is', responseData)
@@ -95,9 +96,9 @@ const changePasswordFailure = function (error) {
 }
 
 const onSignOutSuccess = function (responseData) {
-  $('#cars-display').text('Signed Out successfully!')
-  $('#cars-display').removeClass()
-  $('#cars-display').addClass('text-success')
+  $('#success-message').text('Signed Out successfully!')
+  $('#success-message').removeClass()
+  $('#success-message').addClass('text-success')
   $('form').trigger('reset')
   $('#signOutBtn').hide()
   $('#changePasswordNavBtn').hide()
@@ -106,10 +107,15 @@ const onSignOutSuccess = function (responseData) {
   $('#postNavBtn').hide()
   $('#showUserPostsBtn').hide()
   $('#showAllBtn').hide()
+  $('#updateNavBtn').hide()
+  $('#cars-display').empty()
+  $('#updateCar').hide()
+  $('#createCar').hide()
+  $('#changePassword').hide()
 
   setTimeout(() => {
-    $('#cars-display').html('')
-    $('#cars-display').removeClass('text-success')
+    $('#success-message').html('')
+    $('#success-message').removeClass('text-success')
   }, 5000)
 
   console.log('responseData is', responseData)
