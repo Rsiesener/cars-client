@@ -13,8 +13,6 @@ const newPostSuccess = function (responseData) {
     $('#success-message').html('')
     $('#success-message').removeClass('text-success')
   }, 5000)
-
-  console.log('responseData is', responseData)
 }
 
 const newPostFailure = function (error) {
@@ -32,7 +30,6 @@ const newPostFailure = function (error) {
 
 const showAllPostsSuccess = function (responseData) {
   const cars = responseData.cars
-  console.log(responseData)
   let carsHtml = ''
 
   cars.forEach(car => {
@@ -58,13 +55,12 @@ const showAllPostsFailure = function (error) {
     $('#error-display').removeClass('text-danger')
   }, 5000)
 
-  console.log(error)
+  console.error(error)
 }
 
 const showUserPostsSuccess = function (responseData) {
   const cars = responseData.cars
   const user = store.user._id
-  console.log(responseData)
   let counter = 1
   let carsHtml = ''
 
@@ -112,8 +108,6 @@ const deleteUserPostSuccess = function (responseData) {
     $('#success-message').html('')
     $('#success-message').removeClass('text-success')
   }, 5000)
-
-  console.log('responseData is', responseData)
 }
 
 const deleteUserPostFailure = function (error) {
@@ -141,8 +135,6 @@ const updateUserPostSuccess = function (responseDate) {
     $('#success-message').html('')
     $('#success-message').removeClass('text-success')
   }, 5000)
-
-  console.log('responseData is', responseDate)
 }
 
 const updateUserPostFailure = function (error) {

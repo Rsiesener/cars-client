@@ -11,8 +11,6 @@ const signUpSuccess = function (responseData) {
     $('#success-message').html('')
     $('#success-message').removeClass('text-success')
   }, 5000)
-
-  console.log('responseData is', responseData)
 }
 
 const signUpFailure = function (error) {
@@ -49,8 +47,6 @@ const signInSuccess = function (responseData) {
     $('#success-message').html('')
     $('#success-message').removeClass('text-success')
   }, 5000)
-
-  console.log('responseData is', responseData)
 }
 
 const signInFailure = function (error) {
@@ -76,8 +72,6 @@ const changePasswordSuccess = function (responseData) {
     $('#success-message').html('')
     $('#success-message').removeClass('text-success')
   }, 5000)
-
-  console.log('responseData is', responseData)
 }
 
 const changePasswordFailure = function (error) {
@@ -115,8 +109,6 @@ const onSignOutSuccess = function (responseData) {
     $('#success-message').html('')
     $('#success-message').removeClass('text-success')
   }, 5000)
-
-  console.log('responseData is', responseData)
 }
 
 const onSignOutFailure = function (error) {
