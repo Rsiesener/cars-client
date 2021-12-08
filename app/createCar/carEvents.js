@@ -1,6 +1,4 @@
 const getFormFields = require('../../lib/get-form-fields')
-const { apiUrl } = require('../config')
-
 const carApi = require('./carApi')
 const carUi = require('./carUi')
 
@@ -26,11 +24,11 @@ const onShowUserPosts = function (event) {
 const onDeleteUserPost = function (event) {
   event.preventDefault()
 
-  //event.target is the delete button that was clicked 
+  // event.target is the delete button that was clicked
   const deleteButton = event.target
   // extract the id from the delete button that was clicked on data-id
   const id = $(deleteButton).attr('value')
-// make API call for deleting one book with the data we grabbed from 
+  // make API call for deleting one book with the data we grabbed from
 
   carApi.deleteUserPost(id)
     .then(carUi.deleteUserPostSuccess)

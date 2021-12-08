@@ -14,7 +14,7 @@ const signUpSuccess = function (responseData) {
 }
 
 const signUpFailure = function (error) {
-  $('#error-message').text('Sign up fail!')
+  $('#error-message').html('Sign up fail!')
   $('#error-message').removeClass()
   $('#error-message').addClass('text-danger')
 
@@ -29,7 +29,7 @@ const signUpFailure = function (error) {
 const signInSuccess = function (responseData) {
   store.user = responseData.user
 
-  $('#success-message').text('Signed in successfully!')
+  $('#success-message').html('Signed in successfully!')
   $('#success-message').removeClass()
   $('#success-message').addClass('text-success')
   $('form').trigger('reset')
@@ -50,7 +50,7 @@ const signInSuccess = function (responseData) {
 }
 
 const signInFailure = function (error) {
-  $('#error-message').text('Sign in fail!')
+  $('#error-message').html('Sign in fail!')
   $('#error-message').removeClass()
   $('#error-message').addClass('text-danger')
 
@@ -63,7 +63,7 @@ const signInFailure = function (error) {
 }
 
 const changePasswordSuccess = function (responseData) {
-  $('#success-message').text('Change password successfully!')
+  $('#success-message').html('Change password successfully!')
   $('#success-message').removeClass()
   $('#success-message').addClass('text-success')
   $('form').trigger('reset')
@@ -75,7 +75,7 @@ const changePasswordSuccess = function (responseData) {
 }
 
 const changePasswordFailure = function (error) {
-  $('#error-message').text('Change password fail!')
+  $('#error-message').html('Change password fail!')
   $('#error-message').removeClass()
   $('#error-message').addClass('text-danger')
 
@@ -88,7 +88,7 @@ const changePasswordFailure = function (error) {
 }
 
 const onSignOutSuccess = function (responseData) {
-  $('#success-message').text('Signed Out successfully!')
+  $('#success-message').html('Signed Out successfully!')
   $('#success-message').removeClass()
   $('#success-message').addClass('text-success')
   $('form').trigger('reset')
@@ -112,7 +112,7 @@ const onSignOutSuccess = function (responseData) {
 }
 
 const onSignOutFailure = function (error) {
-  $('#error-message').text('Sign Out Fail!')
+  $('#error-message').html('Sign Out Fail!')
   $('#error-message').removeClass()
   $('#error-message').addClass('text-danger')
 

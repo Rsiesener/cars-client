@@ -1,8 +1,8 @@
-const { changePasswordFailure } = require('../auth/ui')
+
 const store = require('../store')
 
 const newPostSuccess = function (responseData) {
-  $('#success-message').text('Post Successful!!')
+  $('#success-message').html('Post Successful!!')
   $('#success-message').removeClass()
   $('#success-message').addClass('text-success')
   $('form').trigger('reset')
@@ -16,7 +16,7 @@ const newPostSuccess = function (responseData) {
 }
 
 const newPostFailure = function (error) {
-  $('#error-message').text('Failed to post!!')
+  $('#error-message').html('Failed to post!!')
   $('#error-message').removeClass()
   $('#error-message').addClass('text-danger')
 
@@ -46,7 +46,7 @@ const showAllPostsSuccess = function (responseData) {
 }
 
 const showAllPostsFailure = function (error) {
-  $('#error-message').text('Failed to find posts!!')
+  $('#error-message').html('Failed to find posts!!')
   $('#error-message').removeClass()
   $('#error-message').addClass('text-danger')
 
@@ -86,7 +86,7 @@ const showUserPostsSuccess = function (responseData) {
 }
 
 const showUserPostsFailure = function (error) {
-  $('#error-message').text('Failed to find posts!!')
+  $('#error-message').html('Failed to find posts!!')
   $('#error-message').removeClass()
   $('#error-message').addClass('text-danger')
 
@@ -99,7 +99,7 @@ const showUserPostsFailure = function (error) {
 }
 
 const deleteUserPostSuccess = function (responseData) {
-  $('#success-message').text('Delete Successful!!')
+  $('#success-message').html('Delete Successful!!')
   $('#success-message').removeClass()
   $('#success-message').addClass('text-success')
   $('#cars-display').empty()
@@ -111,7 +111,7 @@ const deleteUserPostSuccess = function (responseData) {
 }
 
 const deleteUserPostFailure = function (error) {
-  $('#error-message').text('Failed to delete post!!')
+  $('#error-message').html('Failed to delete post!!')
   $('#error-message').removeClass()
   $('#error-message').addClass('text-danger')
 
@@ -124,7 +124,7 @@ const deleteUserPostFailure = function (error) {
 }
 
 const updateUserPostSuccess = function (responseDate) {
-  $('#success-message').text('Update Successful!!')
+  $('#success-message').html('Update Successful!!')
   $('#success-message').removeClass()
   $('#success-message').addClass('text-success')
   $('form').trigger('reset')
@@ -138,7 +138,7 @@ const updateUserPostSuccess = function (responseDate) {
 }
 
 const updateUserPostFailure = function (error) {
-  $('#error-message').text('Failed to update post!!')
+  $('#error-message').html('Failed to update post!!')
   $('#error-message').removeClass()
   $('#error-message').addClass('text-danger')
 
