@@ -21,8 +21,8 @@ const newPostFailure = function (error) {
   $('#error-message').addClass('text-danger')
 
   setTimeout(() => {
-    $('#error-display').html('')
-    $('#error-display').removeClass('text-danger')
+    $('#error-message').html('')
+    $('#error-message').removeClass('text-danger')
   }, 5000)
 
   console.error(error)
@@ -51,8 +51,8 @@ const showAllPostsFailure = function (error) {
   $('#error-message').addClass('text-danger')
 
   setTimeout(() => {
-    $('#error-display').html('')
-    $('#error-display').removeClass('text-danger')
+    $('#error-message').html('')
+    $('#error-message').removeClass('text-danger')
   }, 5000)
 
   console.error(error)
@@ -91,8 +91,8 @@ const showUserPostsFailure = function (error) {
   $('#error-message').addClass('text-danger')
 
   setTimeout(() => {
-    $('#error-display').html('')
-    $('#error-display').removeClass('text-danger')
+    $('#error-message').html('')
+    $('#error-message').removeClass('text-danger')
   }, 5000)
 
   console.error(error)
@@ -116,8 +116,8 @@ const deleteUserPostFailure = function (error) {
   $('#error-message').addClass('text-danger')
 
   setTimeout(() => {
-    $('#error-display').html('')
-    $('#error-display').removeClass('text-danger')
+    $('#error-message').html('')
+    $('#error-message').removeClass('text-danger')
   }, 5000)
 
   console.error(error)
@@ -143,8 +143,8 @@ const updateUserPostFailure = function (error) {
   $('#error-message').addClass('text-danger')
 
   setTimeout(() => {
-    $('#error-display').html('')
-    $('#error-display').removeClass('text-danger')
+    $('#error-message').html('')
+    $('#error-message').removeClass('text-danger')
   }, 5000)
 
   console.error(error)

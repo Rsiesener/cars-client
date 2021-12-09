@@ -19,8 +19,8 @@ const signUpFailure = function (error) {
   $('#error-message').addClass('text-danger')
 
   setTimeout(() => {
-    $('#error-display').html('')
-    $('#error-display').removeClass('text-danger')
+    $('#error-message').html('')
+    $('#error-message').removeClass('text-danger')
   }, 5000)
 
   console.error(error)
@@ -55,8 +55,8 @@ const signInFailure = function (error) {
   $('#error-message').addClass('text-danger')
 
   setTimeout(() => {
-    $('#error-display').html('')
-    $('#error-display').removeClass('text-danger')
+    $('#error-message').html('')
+    $('#error-message').removeClass('text-danger')
   }, 5000)
 
   console.error(error)
@@ -80,8 +80,8 @@ const changePasswordFailure = function (error) {
   $('#error-message').addClass('text-danger')
 
   setTimeout(() => {
-    $('#error-display').html('')
-    $('#error-display').removeClass('text-danger')
+    $('#error-message').html('')
+    $('#error-message').removeClass('text-danger')
   }, 5000)
 
   console.error(error)
@@ -117,8 +117,8 @@ const onSignOutFailure = function (error) {
   $('#error-message').addClass('text-danger')
 
   setTimeout(() => {
-    $('#error-display').html('')
-    $('#error-display').removeClass('text-danger')
+    $('#error-message').html('')
+    $('#error-message').removeClass('text-danger')
   }, 5000)
 
   console.error(error)
