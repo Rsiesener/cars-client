@@ -1,0 +1,341 @@
+@import '~bootstrap/scss/bootstrap';
+
+body {
+  background-image: url('https://imgur.com/cx0A40H.jpg');
+  background-size: 100% 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+}
+
+.top {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.topRight {
+  display: flex;
+  justify-content: center;
+  width: 33vw;
+}
+
+.middleLeft {
+  display: flex;
+  justify-content: center;
+  width: 30vw;
+}
+
+.middleRight {
+  display: flex;
+  justify-content: center;
+  width: 30vw;
+}
+
+.updatePost {
+  display: flex;
+  align-self: flex-start;
+}
+
+
+#signUp {
+  display: none;
+}
+
+.signUpForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#signIn {
+  display: none;
+}
+
+.signInForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.showUserPostsBtn {
+  display: none;
+  border-color: red;
+  color: white;
+  background-color:black;
+}
+.showUserPostsBtn:hover {
+  display: none;
+  border-color: red;
+  color: red;
+  background-color:black;
+}
+
+#changePassword {
+  display: none;
+}
+
+.changePasswordForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.inputTop {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.inputBottom {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.changePasswordBtn {
+  border-radius: 10px;
+  border-color: green;
+  color: white;
+  background-color:black;
+}
+.changePasswordBtn:hover {
+  border-radius: 10px;
+  border-color: red;
+  color: red;
+  background-color:black;
+}
+
+.changePasswordNavBtn {
+  display: none;
+  border-color: green;
+  color: white;
+  background-color:black;
+}
+.changePasswordNavBtn:hover {
+  display: none;
+  border-color: green;
+  color: green;
+  background-color:black;
+}
+
+.signOutBtn {
+  display: none;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  border-color: green;
+  color: white;
+  background-color:black;
+}
+.signOutBtn:hover {
+  display: none;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  border-color: green;
+  color: green;
+  background-color:black;
+}
+
+.postNavBtn {
+  display: none;
+  border-color: yellow;
+  color: white;
+  background-color:black;
+}
+.postNavBtn:hover {
+  display: none;
+  border-color: yellow;
+  color: yellow;
+  background-color:black;
+}
+
+.updateCar {
+  display:  none;
+}
+
+.updateCarForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.submitBtn {
+  color: green;
+  border-radius: 10px;
+  border-color: green;
+  color: white;
+  background-color:black;
+}
+.submitBtn:hover {
+  color: green;
+  border-radius: 10px;
+  border-color: green;
+  color: green;
+  background-color:black;
+}
+
+.headerImgInner {
+  height: 30vh;
+  width: 35vw;
+  background-attachment: fixed;
+  background-size: 100%;
+  border-radius: 25px;
+}
+
+.wrapper {
+  display: flex;
+}
+
+.content {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.contentContainer {
+  display: flex;
+  overflow: auto;
+  height: 50vh;
+  width: 50vw;
+  opacity: .7;
+  border-radius: 25px;
+  background-color: white;
+  justify-content: center;
+  
+}
+
+.createCar {
+  display: none;
+}
+
+.createCarForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.showAllBtn {
+  display: none;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  border-color: red;
+  color: white;
+  background-color:black;
+}
+.showAllBtn:hover {
+  display: none;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  border-color: red;
+  color: red;
+  background-color:black;
+}
+
+.updateNavBtn {
+  display: none;
+  border-color: yellow;
+  color: white;
+  background-color:black;
+}
+.updateNavBtn:hover {
+  display: none;
+  border-color: yellow;
+  color: yellow;
+  background-color:black;
+}
+
+.cars-display {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.deleteBtn {
+  width: 10vw;
+  border-radius: 15px;
+  border-color: green;
+  color: white;
+  background-color:black;
+}
+.deleteBtn:hover {
+  width: 10vw;
+  border-radius: 15px;
+  border-color: red;
+  color: red;
+  background-color:black;
+}
+
+.btnWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.signUpNavBtn {
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  border-color: red;
+  color: white;
+  background-color: black;
+}
+.signUpNavBtn:hover {
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  border-color: red;
+  color: red;
+  background-color: black;
+}
+
+.signInNavBtn {
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  border-color: green;
+  color: white;
+  background-color:black;
+}
+.signInNavBtn:hover {
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  border-color: green;
+  color: green;
+  background-color:black;
+}
+
+.signUpBtn {
+  border-radius: 10px;
+  border-color: green;
+  color: white;
+  background-color:black;
+}
+.signUpBtn:hover {
+  border-radius: 10px;
+  border-color: green;
+  color: green;
+  background-color:black;
+}
+
+.signInBtn {
+  border-radius: 10px;
+  border-color: green;
+  color: white;
+  background-color:black;
+}
+.signInBtn:hover {
+  border-radius: 10px;
+  border-color: green;
+  color: green;
+  background-color:black;
+}
+
+.legend1 {
+  display: flex;
+  justify-content: center;
+  font-family: fantasy, arial;
+  color: gold;
+  text-shadow: 3px 3px 3px black;
+}
+
+.postDescription {
+  border-radius: 10px;
+}
+
+.showData {
+  font-family: fantasy, arial;
+  color: gold;
+  text-shadow: 3px 3px 3px black;
+}

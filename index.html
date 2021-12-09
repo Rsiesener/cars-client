@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Car Blog</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body>
+      
+
+      <div class="top">
+        <div class="headerImgOuter">
+          <img src="https://i.imgur.com/6TTx24I.jpg" class="headerImgInner" alt="Photo of a car doing a burn out">
+        </div>
+
+        <div class="topRight">
+          <form id="changePassword" class="changePassword">
+            <fieldset class="changePasswordForm">
+              <legend class="legend1">Change Password</legend>
+              <input class="inputTop" type="password" name="passwords[old]" placeholder="Old Password" required>
+              <input class="inputBottom" type="password" name="passwords[new]" placeholder="New Password" required>
+              <button class="changePasswordBtn" id="changePasswordBtn">Submit</button>
+            </fieldset>
+          </form>
+        </div>
+
+      </div>
+
+      <nav> 
+        <div class="btnWrapper">
+          <div class="navBtns">
+            <button class="showAllBtn" id="showAllBtn">Show All</button>
+            <button class="showUserPostsBtn" id="showUserPostsBtn">your Posts</button>
+            <button class="updateNavBtn" id="updateNavBtn">Update Post</button>
+            <button class="signUpNavBtn" id="signUpNavBtn">Sign-Up</button>
+            <button class="signInNavBtn" id="signInNavBtn">Sign-In</button>
+            <button class="postNavBtn" id="postNavBtn">New Post</button>
+            <button class="changePasswordNavBtn" id="changePasswordNavBtn">Change Password</button>
+            <button class="signOutBtn" id="signOutBtn">Sign-Out</button>
+          </div>
+        </div>
+      </nav> 
+
+      
+      <section id="content" class="content">
+        <div class="middleLeft">
+          <section id="updatePost" class="updatePost">
+            <form id="updateCar" class="updateCar">
+              <fieldset class="updateCarForm">
+                <legend class="legend1">Update Post</legend>
+                <input class="inputTop" type="text" name="car[id]" placeholder="Car ID" required>
+                <input type="text" name="car[make]" placeholder="Make" required>
+                <input type="text" name="car[model]" placeholder="Model" required>
+                <input type="number" name="car[year]" placeholder="Year" required>
+                <textarea class="postDescription" type="text" name="car[description]"  rows="6" cols="30" placeholder="Tell us anything you would like about your vehicle here."></textarea>
+                <button class="submitBtn" id="updateSubmitBtn">Submit</button>
+              </fieldset>
+            </form>
+
+            <div id="success-message"></div>
+            <div id="error-message"></div>
+
+          </section>
+        </div>
+        
+        <div class="contentContainer" id="contentContainer">
+
+          <section id="beforeSignIn">
+            <form id="signUp" class="signUp">
+              <fieldset class="signUpForm">
+                <legend class="legend1">Sign Up</legend>
+                <input class="inputTop" type="email" name="credentials[email]" placeholder="Email" required>
+                <input type="password" name="credentials[password]"
+                placeholder="Password" required>
+                <input class="inputBottom" type="password" name="credentials[password_confirmation]" placeholder="Password Confirmation" required>
+                <button class="signUpBtn" id="signUpBtn">Sign Up</button>
+              </fieldset>
+            </form>
+
+            <form id="signIn" class="signIn">
+              <fieldset class="signInForm">
+                <legend class="legend1">Sign In</legend>
+                <input class="inputTop" type="email" name="credentials[email]" placeholder="Email" required>
+                <input class="inputBottom" type="password" name="credentials[password]" placeholder="Password" required>
+                <button class="signInBtn" id="signInBtn">Sign In</button>
+              </fieldset>
+            </form>
+          </section>
+          
+          <section>
+            <div id="cars-display" class="cars-display"></div>
+          </section>
+          
+        </div>
+        
+        <div class="middleRight">
+          <section id="newPost">
+            <form id="createCar" class="createCar">
+              <fieldset class="createCarForm">
+                <legend class="legend1">New Post</legend>
+                <input class="inputTop" type="text" name="car[make]" placeholder="Make" required>
+                <input type="text" name="car[model]" placeholder="Model" required>
+                <input type="number" name="car[year]" placeholder="Year" required>
+                <textarea class="postDescription" type="text" name="car[description]"  rows="6" cols="30" placeholder="Tell us anything you would like about your vehicle here."></textarea>
+                <button class="submitBtn" id="submitBtn">Submit</button>
+              </fieldset>
+            </form>
+          </section>
+        </div>
+       
+      </section>
+
+    </body>
+</html>
